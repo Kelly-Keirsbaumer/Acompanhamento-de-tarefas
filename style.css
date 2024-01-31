@@ -1,0 +1,73 @@
+body {
+  background-color: black;
+}
+
+h1 {
+  text-align: center;
+  color: rgb(238, 237, 250);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+fieldset {
+  width: 370px;
+  color: rgb(204, 187, 221);
+  background-color: rgba(192, 48, 115, 0.877);
+  font-weight: bolder;
+}
+
+fieldset,
+p {
+  text-align: center;
+}
+
+table {
+  border-collapse: collapse;
+  text-align: center;
+  background-color: rgba(0, 255, 255, 0.719);
+}
+
+caption {
+  font-size: 2em;
+  font-weight: bold;
+  color: rgb(211, 210, 224);
+  padding: 20px 10px 10px 10px;
+}
+
+th {
+  height: 30px;
+  border: 1px solid rgb(0, 0, 0);
+  padding: 8px;
+}
+
+td {
+  border: 1px solid black;
+  padding: 8px;
+}
+
+li {
+  text-align: left;
+  font-weight: bold;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#table-container {
+  overflow: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.date-inputs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}

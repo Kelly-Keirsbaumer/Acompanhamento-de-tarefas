@@ -1,96 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>3- Acompanhamento semanal</title>
-    <style>
-        body {
-            background-color: black;
-            
-        }
-        h1 {
-            text-align: center;
-            color: rgb(238, 237, 250) ;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        
-        }
-        fieldset {
-            width: 370px;
-            color: rgb(204, 187, 221);
-            background-color: rgba(192, 48, 115, 0.877);
-            font-weight: bolder;
-        }
-        fieldset,p {
-            text-align: center;
-        }
-        table {
-            width: 700px;
-            height: 600px;
-            border-collapse: collapse;
-            text-align: center;
-            background-color: rgba(0, 255, 255, 0.719);
-        }
-
-        caption{
-            font-size: 2em;
-            font-weight: bold;
-            color: rgb(211, 210, 224);
-            padding: 20px 10px 10px 10px;
-            
-        }
-        th {
-            
-            height: 30px;
-            border: 1px solid rgb(0, 0, 0);
-            padding: 8px;
-           
-        }
-        td { 
-            border: 1px solid black;
-            padding: 8px;
-        }
-          
-        li {
-            text-align: left;
-            font-weight: bold;
-        }   
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-            
-
-    </style>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <h1>Acompanhamento de tarefas</h1>
     <div class="container">
-  
-   <form action="pag001.html" method="get" autocomplete="on">
-    <fieldset>
-                <p>
+      <form action="pag001.html" method="get" autocomplete="on">
+        <fieldset>
+          <p>
             <label for="inome">Nome</label>
-            <input type="text" name="nome" id="inome" placeholder="Nome">
-        </p>
-       
-    </fieldset>
-   
-
-   </form>
-    <table>
-        <Caption>Programação Diária</Caption>
-        <thead>
+            <input type="text" name="nome" id="inome" placeholder="Nome" />
+          </p>
+        </fieldset>
+      </form>
+      <div id="table-container">
+        <table>
+          <caption>
+            Programação Diária
+          </caption>
+          <thead>
             <tr>
-                <th>Turno</th>
-                <th>Padrão de férias</th>
-                <th><label for="idia">Dia</label>
-                    <input type="date" name="dia" id="idia" required> 
-                    <label for="sem">Dia da semana</label>
-                    <select name="dia da semana" id="sem">
-                        <option value="" selected>--- Escolha ---</option>
+              <th>Turno</th>
+              <th>Padrão de férias</th>
+              <th>
+                <div class="date-inputs">
+                  <label for="idia">Dia</label>
+                  <input type="date" name="dia" id="idia" required />
+                </div>
+                <br />
+                <div class="date-inputs">
+                  <label for="sem">Dia da semana</label>
+                  <select name="dia da semana" id="sem">
+                    <option value="" selected>--- Escolha ---</option>
                     <option value="seg">Segunda</option>
                     <option value="ter">Terça</option>
                     <option value="qua">Quarta</option>
@@ -98,77 +43,91 @@
                     <option value="sex">Sexta</option>
                     <option value="sab">Sábado</option>
                     <option value="dom">Domingo</option>
-                </select>
-                </th>
-                  
+                  </select>
+                </div>
+              </th>
             </tr>
             <tr>
-                <td>Manhã <br> 08:00 às 12:00</td>
-                <td>
-                    <ol>
-                        <li>Abrir a cortina</li>
-                        <li>Arrumar a cama</li> 
-                        <li>Tomar café</li>
-                        <li>Escovar os dentes</li>
-                        <li>Pentear o cabelo</li>
-                        <li>Organizar o quarto </li>
-                    </ol> 
-                   
-                </td>
-                <td> 
-                   
-                    <input type="checkbox" name="es1" id="m1"> 1 OK<br> 
-                    <input type="checkbox" name="es2" id="m2"> 2 OK<br> 
-                    <input type="checkbox" name="es3" id="m3"> 3 OK<br> 
-                    <input type="checkbox" name="es4" id="m4"> 4 OK<br> 
-                    <input type="checkbox" name="es5" id="m5"> 5 OK<br> 
-                    <input type="checkbox" name="es6" id="m6"> 6 OK<br> <br> 
+              <td>
+                Manhã <br />
+                08:00 às 12:00
+              </td>
+              <td class="task-list">
+                <ol>
+                  <li>Abrir a cortina</li>
+                  <li>Arrumar a cama</li>
+                  <li>Tomar café</li>
+                  <li>Escovar os dentes</li>
+                  <li>Pentear o cabelo</li>
+                  <li>Organizar o quarto</li>
+                </ol>
+              </td>
+              <td>
+                <input type="checkbox" name="es1" id="m1" /> 1 OK<br />
+                <input type="checkbox" name="es2" id="m2" /> 2 OK<br />
+                <input type="checkbox" name="es3" id="m3" /> 3 OK<br />
+                <input type="checkbox" name="es4" id="m4" /> 4 OK<br />
+                <input type="checkbox" name="es5" id="m5" /> 5 OK<br />
+                <input type="checkbox" name="es6" id="m6" /> 6 OK<br />
+                <br />
 
-                    
-                    <label for="obs">Observação</label> <br>
-                    <textarea name="obs" id="obs" cols="30" rows="3"></textarea>
-                                          
-                </td>
+                <label for="obs">Observação</label> <br />
+                <textarea name="obs" id="obs" cols="20" rows="3"></textarea>
+              </td>
             </tr>
             <tr>
-                <td>Tarde <br> 12:00 às 18:00</td>
-                <td>
-                    <ol>
-                        <li>Almoçar</li>
-                        <li>Escovar os dentes</li>
-                        <li>Estudar inglês</li>
-                        <li>Praticar caligrafia</li>
-                        <li>Lanchar</li>
-                    </ol> 
-                </td>
-                <td> 
-                    <input type="checkbox" name="es1" id="es1"> 1 OK<br> 
-                    <input type="checkbox" name="es2" id="es2"> 2 OK<br> 
-                    <input type="checkbox" name="es3" id="es3"> 3 OK<br> 
-                    <input type="checkbox" name="es4" id="es4"> 4 OK<br> 
-                    <input type="checkbox" name="es5" id="es5"> 5 OK<br>  <br>
+              <td>
+                Tarde <br />
+                12:00 às 18:00
+              </td>
+              <td class="task-list">
+                <ol>
+                  <li>Almoçar</li>
+                  <li>Escovar os dentes</li>
+                  <li>Estudar inglês</li>
+                  <li>Praticar caligrafia</li>
+                  <li>Lanchar</li>
+                </ol>
+              </td>
+              <td>
+                <input type="checkbox" name="es1" id="es1" /> 1 OK<br />
+                <input type="checkbox" name="es2" id="es2" /> 2 OK<br />
+                <input type="checkbox" name="es3" id="es3" /> 3 OK<br />
+                <input type="checkbox" name="es4" id="es4" /> 4 OK<br />
+                <input type="checkbox" name="es5" id="es5" /> 5 OK<br />
+                <br />
 
-                    <label for="obs">Observação</label> <br>
-                    <textarea name="obs" id="obs" cols="30" rows="3"></textarea>
-                   
-                </td>
+                <label for="obs">Observação</label> <br />
+                <textarea name="obs" id="obs" cols="20" rows="3"></textarea>
+              </td>
             </tr>
             <tr>
-                <td>Noite <br> 18:00 às 22:00</td>
-                <td>
-                    <ol>
-                       <li>Jantar</li>
-                       <li>Tomar banho</li>
-                       <li>Escovar os dentes</li>
-                       <li>Ler livro ou gibi</li>
-                    </ol> 
-                </td>
-                <td> 
-                    <input type="checkbox" name="es1" id="es1"> 1 OK<br> 
-                    <input type="checkbox" name="es2" id="es2"> 2 OK<br> 
-                    <input type="checkbox" name="es3" id="es3"> 3 OK<br> 
-                    <input type="checkbox" name="es4" id="es4"> 4 OK<br> <br>
-                    
-                    <label for="obs">Observação</label> <br>
-                    <textarea name="obs" id="obs" cols="30" rows="3"></textarea>
-                </td>
+              <td>
+                Noite <br />
+                18:00 às 22:00
+              </td>
+              <td class="task-list">
+                <ol>
+                  <li>Jantar</li>
+                  <li>Tomar banho</li>
+                  <li>Escovar os dentes</li>
+                  <li>Ler livro ou gibi</li>
+                </ol>
+              </td>
+              <td>
+                <input type="checkbox" name="es1" id="es1" /> 1 OK<br />
+                <input type="checkbox" name="es2" id="es2" /> 2 OK<br />
+                <input type="checkbox" name="es3" id="es3" /> 3 OK<br />
+                <input type="checkbox" name="es4" id="es4" /> 4 OK<br />
+                <br />
+
+                <label for="obs">Observação</label> <br />
+                <textarea name="obs" id="obs" cols="20" rows="3"></textarea>
+              </td>
+            </tr>
+          </thead>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
